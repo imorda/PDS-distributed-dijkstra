@@ -7,6 +7,7 @@
 В файле [`DijkstraProcess.java`](src/solution/DijkstraProcess.java) находится описание интерфейса, 
 который вам предстоит реализовать. Свой код на языке Java пишите в файле 
 [`DijkstraProcessImpl.java`](src/solution/DijkstraProcessImpl.java).
+**Не забудьте указать свое имя и фамилию в файле с вашим решением.**
 
 Для решения на Kotlin откройте Java решения и нажмите Ctrl+Alt+Shift+K (Cmd+Alt+Shift+K на MacOS) в IntelliJ IDEA для 
 конвертации соответствующего фала из XXX.java в XXX.kt. На вопрос 
@@ -42,10 +43,10 @@ Do you want to find such code and correct it too?" отвечайте "No".
 * `getDistance()` &mdash; вызывается после завершения вычисления. Процесс должен вернуть кратчайшее расстояние 
 от инициатора до этого процесса, или `null`, если не существует пути от инициатора до этого процесса.
 
-
 ## Работа с сообщениями
 
-Каждое отправленное сообщение должно быть сериализуемо. Описание класса сообщений может выглядеть, например, так:
+**Каждое отправленное сообщение должно быть сериализуемо.** 
+Описание класса сообщений может выглядеть, например, так:
 
 ```java
 record MyMessage(int key, String value) implements java.io.Serializable {}
@@ -90,4 +91,13 @@ if (message is MyMessage) {
 
 Тестирования реализации происходит путем запуска теста [`DijkstraProcessTest.java`](test/solution/DijkstraProcessTest.java)
 
-Из командной строки: `./gradlew test --tests solution*`
+Из командной строки: `./gradlew test --tests 'solution*'`
+
+## Формат сдачи
+
+Выполняйте задание в этом репозитории.
+**Ваш код должен быть реализован в одном файле [`src/solution/DijkstraProcessImpl.java`](src/solution/DijkstraProcessImpl.java) 
+или `src/solution/DijkstraProcessImpl.kt`**.
+
+Инструкции по сдаче заданий находятся в
+[этом документе](https://docs.google.com/document/d/1kUZl08zUoprZzB2xCX89HbrTkSTAQZens6xAzu-5pvw). 

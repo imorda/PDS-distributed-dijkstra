@@ -1,10 +1,19 @@
+group = "ru.ifmo.pds"
+version = "1.0-SNAPSHOT"
+
 plugins {
     java
-    kotlin("jvm") version "1.8.10"
+    kotlin("jvm") version "1.9.22"
 }
 
 repositories {
     mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
 }
 
 dependencies {
@@ -25,8 +34,4 @@ sourceSets.main {
 
 sourceSets.test {
     java.setSrcDirs(listOf("test"))
-}
-
-kotlin {
-    jvmToolchain(17)
 }
